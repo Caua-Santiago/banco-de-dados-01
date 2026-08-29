@@ -80,9 +80,16 @@ update reserva_livro set status = 'Cancelada' where id_reserva_livro = 1;
 update reserva_espaco set status = 'Confirmada' where id_reserva_espaco = 5;
 
 -- 25- 	Primeiro, cadastre na tabela categoria uma categoria chamada: Categoria Teste
-
--- 26- Primeiro, cadastre na tabela autor:  Autor Teste, em seguida, exclua ela pelo id gerado. 
-
+insert into categoria (nome)
+	values (' Categoria Teste');
+    delete from categoria where id_categoria = 8;
+-- 26- Primeiro, cadastre na tabela autor:  Autor Teste, em seguida, exclua ela pelo id gerado, em seguida, exclua ela pelo id gerado.
+insert into autor (nome)
+	values ('Autor Teste');
+delete from autor where id_autor = 7; 
 -- 27- Primeiro, cadastre um espaço com os seguintes dados: Nome: Sala Temporária, Capacidade: 5, Localização: Térreo, Status: Disponível, em seguida, exclua ela pelo id gerado. 
-
+insert into espaco (nome, capacidade, localizacao, status)
+	values ('Sala Temporária', 5, 'Térreo', 'Disponível');
+delete from espaco where id_espaco = 8;
 -- 28 - Exclua o tipo_usuario de id_tipo_usuario igual a 1. O que aconteceu? Qual a mensagem recebida? O que significa? Como resolver?
+delete from tipo_usuario where id_tipo_usuario = 1;
